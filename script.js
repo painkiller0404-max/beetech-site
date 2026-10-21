@@ -1,9 +1,9 @@
 /* ====== CONFIG: edit these placeholders ====== */
 const CONFIG = {
-  whatsapp: "213000000000",            // international format, digits only (no + or spaces)
+  whatsapp: "00213555062910",            // international format, digits only (no + or spaces)
   email: "contact@beetech-dz.com",
-  phoneDisplay: "+213 000 00 00 00",
-  phoneLink: "+213000000000"
+  phoneDisplay: "+213 555 06 29 10",
+  phoneLink: "+213555062910"
 };
 
 /* ====== Translations ====== */
