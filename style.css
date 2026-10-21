@@ -192,7 +192,7 @@ body.lang-switching main,body.lang-switching .footer{opacity:0}
   .js .reveal{opacity:1;transform:none}
 }
 
-/* ===================== Preloader (first visit per session) ===================== */
+/* ===================== Preloader (15-minute cooldown timer) ===================== */
 html.pl{overflow:hidden}
 .preloader{position:fixed;inset:0;z-index:9999;background:#fff;display:none;align-items:center;justify-content:center;
   transition:opacity .6s ease,visibility .6s ease}

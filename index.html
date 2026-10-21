@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <script>document.documentElement.classList.add("js")</script>
-  <script>(function(){var d=document.documentElement;try{if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)&&!sessionStorage.getItem("bee-pl")){sessionStorage.setItem("bee-pl","1");d.classList.add("pl");setTimeout(function(){d.classList.remove("pl")},7000)}}catch(e){}})()</script>
+  <!-- Preloader gate: shows the logo animation on first visit and again if 15+ minutes have passed since it last played.
+       To change the timer, edit COOLDOWN_MS below (currently 15 * 60 * 1000 = 15 minutes). -->
+  <script>(function(){var d=document.documentElement,COOLDOWN_MS=15*60*1000;try{var now=Date.now(),last=parseInt(localStorage.getItem("bee-pl"),10)||0;if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)&&(now-last)>=COOLDOWN_MS){localStorage.setItem("bee-pl",String(now));d.classList.add("pl");setTimeout(function(){d.classList.remove("pl")},7000)}}catch(e){}})()</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BEE TECHNOLOGY</title>
   <meta name="description" content="BEE TECHNOLOGY – IT services and systems integration in Oran, Algeria.">

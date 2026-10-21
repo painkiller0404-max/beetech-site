@@ -1,4 +1,4 @@
-/* BEE TECHNOLOGY: logo preloader (shown once per browser session) */
+/* BEE TECHNOLOGY: logo preloader (replays after 15-minute cooldown; gated by inline script in index.html) */
 (function () {
   "use strict";
   var root = document.documentElement;
