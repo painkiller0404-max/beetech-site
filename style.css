@@ -127,3 +127,67 @@ html[dir="rtl"] .menu{margin-inline-start:auto}
   .grid,.grid.four{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===================== Animations ===================== */
+html{--dir:1}
+html[dir="rtl"]{--dir:-1}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes drift{from{background-position:0 0}to{background-position:56px 97px}}
+@keyframes glow{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* Hero entrance + ambient motion */
+.hero::before{animation:drift 40s linear infinite}
+.hero::after{animation:glow 7s ease-in-out infinite}
+.hero-inner>*{opacity:0;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-inner>:nth-child(1){animation-delay:.10s}
+.hero-inner>:nth-child(2){animation-delay:.25s}
+.hero-inner>:nth-child(3){animation-delay:.40s}
+.hero-inner>:nth-child(4){animation-delay:.55s}
+
+/* Scroll reveals (only when JS is running) */
+.js .reveal{opacity:0;transform:translateY(28px);
+  transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .reveal-start{transform:translateX(calc(var(--dir) * -34px))}
+.js .reveal-end{transform:translateX(calc(var(--dir) * 34px))}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.done{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,opacity .25s ease}
+.js .card.reveal.done:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(14,35,71,.14);border-color:var(--blue)}
+
+/* Card icon reacts on hover */
+.icon{transition:background .25s ease,transform .25s ease}
+.icon svg{transition:stroke .25s ease}
+.card:hover .icon{background:var(--blue);transform:scale(1.08) rotate(-4deg)}
+.card:hover .icon svg{stroke:#fff}
+
+/* Buttons */
+.btn-primary:hover{box-shadow:0 10px 24px rgba(55,106,178,.45)}
+.btn-wa{animation:waPulse 2.4s ease-out infinite}
+.btn-wa:hover{animation-play-state:paused;box-shadow:0 10px 26px rgba(37,211,102,.4)}
+
+/* Header: shrink + shadow on scroll, animated menu underline */
+.nav{transition:height .25s ease}
+.logo{transition:height .25s ease}
+.header{transition:box-shadow .25s ease}
+.header.scrolled{box-shadow:0 8px 26px rgba(14,35,71,.10)}
+.header.scrolled .nav{height:64px}
+.header.scrolled .logo{height:46px}
+.menu a{position:relative}
+.menu a::after{content:"";position:absolute;inset-inline:0;bottom:-7px;height:2px;border-radius:2px;background:var(--blue);
+  transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+html[dir="rtl"] .menu a::after{transform-origin:right}
+.menu a:hover::after,.menu a.active::after{transform:scaleX(1)}
+.menu a.active{color:var(--blue)}
+@media (max-width:720px){.menu a::after{display:none}}
+
+/* Language switch fade */
+main,.footer{transition:opacity .18s ease}
+body.lang-switching main,body.lang-switching .footer{opacity:0}
+
+/* Respect "reduce motion" */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .hero-inner>*{opacity:1}
+  .js .reveal{opacity:1;transform:none}
+}
