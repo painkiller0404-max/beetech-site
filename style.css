@@ -80,10 +80,22 @@ h2::after{content:"";display:block;width:52px;height:4px;border-radius:4px;backg
 /* About */
 .about{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
 .about p{color:var(--muted);margin:16px 0 0}
-.stats{list-style:none;margin:0;padding:0;display:grid;gap:16px}
-.stats li{background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px 26px;border-inline-start:5px solid var(--accent-l)}
-.stats strong{display:block;font-size:1.6rem;color:var(--accent-l)}
-.stats span{color:#cdd7e6;font-size:.92rem}
+.stats{list-style:none;margin:0;padding:0;display:grid;gap:16px;
+  /* Adjust --stat-fade (0.0 to 0.9) to control the navy fade strength over the box photos */
+  --stat-fade:.30}
+.stats li{position:relative;overflow:hidden;background:var(--navy);color:#fff;border-radius:var(--radius);padding:24px 26px;border-inline-start:5px solid var(--accent-l);isolation:isolate;transition:transform .25s ease,box-shadow .25s ease}
+.stats li:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,35,71,.24)}
+.stats li::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--stat-img);background-size:cover;background-position:var(--stat-pos,center right);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.stats li:hover::before{transform:scale(1.06)}
+.stats li::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,35,71,.88) 0%,rgba(14,35,71,var(--stat-fade,.30)) 46%,rgba(14,35,71,.06) 100%)}
+html[dir="rtl"] .stats li::before{transform:scaleX(-1)}
+html[dir="rtl"] .stats li:hover::before{transform:scaleX(-1) scale(1.06)}
+html[dir="rtl"] .stats li::after{background:linear-gradient(270deg,rgba(14,35,71,.88) 0%,rgba(14,35,71,var(--stat-fade,.30)) 46%,rgba(14,35,71,.06) 100%)}
+.stats li.stat-it{--stat-img:url("stat-it.jpg")}
+.stats li.stat-oran{--stat-img:url("stat-oran.jpg");--stat-pos:80% 28%}
+.stats li.stat-support{--stat-img:url("stat-support.jpg")}
+.stats strong{display:block;font-size:1.6rem;color:var(--accent-l);text-shadow:0 2px 10px rgba(7,21,38,.75)}
+.stats span{color:#e3ecf8;font-size:.92rem;text-shadow:0 1px 6px rgba(7,21,38,.8)}
 
 /* Why */
 .why{padding:6px 0}
