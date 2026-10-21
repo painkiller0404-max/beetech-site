@@ -191,3 +191,28 @@ body.lang-switching main,body.lang-switching .footer{opacity:0}
   .hero-inner>*{opacity:1}
   .js .reveal{opacity:1;transform:none}
 }
+
+/* ===================== Preloader (first visit per session) ===================== */
+html.pl{overflow:hidden}
+.preloader{position:fixed;inset:0;z-index:9999;background:#fff;display:none;align-items:center;justify-content:center;
+  transition:opacity .6s ease,visibility .6s ease}
+html.pl .preloader{display:flex}
+.preloader.hide{opacity:0;visibility:hidden}
+.pl-logo{width:min(300px,62vw);height:auto;overflow:visible}
+
+.pl-box{fill:#376AB2;opacity:0;transform-box:fill-box;transform-origin:center;
+  animation:plBox .55s cubic-bezier(.2,.7,.2,1) .05s forwards}
+.pl-lines path{fill:none;stroke:#fff;stroke-width:4.3;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:1 2;stroke-dashoffset:1;
+  animation:plDraw .85s ease-in-out forwards;animation-delay:calc(.45s + var(--i) * .035s)}
+.pl-bee path{fill:#fff;fill-rule:evenodd;opacity:0;transform:translateY(14px);
+  animation:plRise .5s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(1.1s + var(--i) * .12s)}
+.pl-tech path{fill:#376AB2;fill-rule:evenodd;opacity:0;
+  animation:plFade .4s ease forwards;animation-delay:calc(1.5s + var(--i) * .05s)}
+@keyframes plBox{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes plDraw{to{stroke-dashoffset:0}}
+@keyframes plRise{to{opacity:1;transform:none}}
+@keyframes plFade{to{opacity:1}}
+
+/* Hero waits for the preloader to start fading */
+html.pl:not(.pl-go) .hero-inner>*{animation-play-state:paused}
