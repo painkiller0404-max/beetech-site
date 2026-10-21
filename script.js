@@ -1,6 +1,6 @@
 /* ====== CONFIG: edit these placeholders ====== */
 const CONFIG = {
-  whatsapp: "00213555062910",            // international format, digits only (no + or spaces)
+  whatsapp: "213555062910",            // international format, digits only (no + or spaces)
   email: "contact@beetech-dz.com",
   phoneDisplay: "+213 555 06 29 10",
   phoneLink: "+213555062910"
@@ -18,8 +18,8 @@ const I18N = {
     services_sub:"Une offre complète pour construire, sécuriser et faire évoluer votre système d'information.",
     s1_t:"Infrastructure & serveurs", s1_d:"Installation, virtualisation et administration de serveurs Windows et Linux, stockage et sauvegardes.",
     s2_t:"Réseaux & sécurité", s2_d:"Architecture réseau, pare-feu, VPN, supervision et réponse aux incidents de sécurité.",
-    s3_t:"Téléphonie VoIP", s3_d:"Standards téléphoniques IP, passerelles FXO/FXS et intégration avec vos lignes existantes.",
-    s4_t:"Messagerie & Microsoft 365", s4_d:"Déploiement et migration Exchange, Microsoft 365 et solutions de messagerie professionnelles.",
+    s3_t:"Téléphonie VoIP", s3_d:"Standards téléphoniques IP et intégration avec vos lignes existantes.",
+    s4_t:"Messagerie professionnelle", s4_d:"Mise en place, migration et gestion de vos solutions de messagerie d'entreprise.",
     s5_t:"Développement & automatisation", s5_d:"Outils internes, intégrations et automatisation de vos processus pour gagner du temps.",
     s6_t:"Support & maintenance", s6_d:"Assistance technique, contrats de maintenance et suivi proactif de votre parc informatique.",
     about_title:"À propos de BEE TECHNOLOGY",
@@ -34,7 +34,7 @@ const I18N = {
     contact_title:"Parlons de votre projet",
     contact_sub:"Écrivez-nous sur WhatsApp, nous vous répondons rapidement.",
     wa_cta:"Discuter sur WhatsApp",
-    c_email:"Email", c_phone:"Téléphone", c_addr:"Adresse", c_addr_v:"Oran, Algérie",
+    c_email:"Email", c_phone:"Téléphone", c_addr:"Adresse", c_addr_v:"101 ZI El Kerma, Oran, Algérie",
     footer_tag:"IT & Intégration de systèmes",
     wa_msg:"Bonjour BEE TECHNOLOGY, je souhaite en savoir plus sur vos services."
   },
@@ -48,8 +48,8 @@ const I18N = {
     services_sub:"A complete offer to build, secure and evolve your information system.",
     s1_t:"Infrastructure & servers", s1_d:"Installation, virtualization and administration of Windows and Linux servers, storage and backups.",
     s2_t:"Networks & security", s2_d:"Network architecture, firewalls, VPN, monitoring and security incident response.",
-    s3_t:"VoIP telephony", s3_d:"IP phone systems, FXO/FXS gateways and integration with your existing lines.",
-    s4_t:"Messaging & Microsoft 365", s4_d:"Exchange and Microsoft 365 deployment and migration, plus professional email solutions.",
+    s3_t:"VoIP telephony", s3_d:"IP phone systems and integration with your existing lines.",
+    s4_t:"Business email", s4_d:"Setup, migration and management of your company's email and messaging solutions.",
     s5_t:"Development & automation", s5_d:"Internal tools, integrations and process automation to save you time.",
     s6_t:"Support & maintenance", s6_d:"Technical support, maintenance contracts and proactive monitoring of your IT estate.",
     about_title:"About BEE TECHNOLOGY",
@@ -64,7 +64,7 @@ const I18N = {
     contact_title:"Let's talk about your project",
     contact_sub:"Message us on WhatsApp and we'll get back to you quickly.",
     wa_cta:"Chat on WhatsApp",
-    c_email:"Email", c_phone:"Phone", c_addr:"Address", c_addr_v:"Oran, Algeria",
+    c_email:"Email", c_phone:"Phone", c_addr:"Address", c_addr_v:"101 ZI El Kerma, Oran, Algeria",
     footer_tag:"IT & Systems Integration",
     wa_msg:"Hello BEE TECHNOLOGY, I'd like to know more about your services."
   },
@@ -78,8 +78,8 @@ const I18N = {
     services_sub:"عرض متكامل لبناء نظام المعلومات الخاص بك وتأمينه وتطويره.",
     s1_t:"البنية التحتية والخوادم", s1_d:"تركيب وافتراضية وإدارة خوادم Windows وLinux، مع التخزين والنسخ الاحتياطي.",
     s2_t:"الشبكات والأمن", s2_d:"تصميم الشبكات وجدران الحماية وVPN والمراقبة والاستجابة لحوادث الأمن.",
-    s3_t:"الهاتفية عبر الإنترنت VoIP", s3_d:"مقاسم هاتفية IP وبوابات FXO/FXS والتكامل مع خطوطك الحالية.",
-    s4_t:"البريد وMicrosoft 365", s4_d:"نشر وترحيل Exchange وMicrosoft 365 وحلول البريد الاحترافية.",
+    s3_t:"الهاتفية عبر الإنترنت VoIP", s3_d:"مقاسم هاتفية IP والتكامل مع خطوطك الحالية.",
+    s4_t:"البريد والمراسلة المهنية", s4_d:"إعداد وترحيل وإدارة حلول البريد والمراسلة الخاصة بمؤسستك.",
     s5_t:"التطوير والأتمتة", s5_d:"أدوات داخلية وتكاملات وأتمتة للعمليات لتوفير وقتك.",
     s6_t:"الدعم والصيانة", s6_d:"دعم تقني وعقود صيانة ومتابعة استباقية لمعداتك المعلوماتية.",
     about_title:"عن BEE TECHNOLOGY",
@@ -94,7 +94,7 @@ const I18N = {
     contact_title:"لنتحدث عن مشروعك",
     contact_sub:"راسلنا على واتساب وسنرد عليك في أقرب وقت.",
     wa_cta:"تحدث معنا على واتساب",
-    c_email:"البريد الإلكتروني", c_phone:"الهاتف", c_addr:"العنوان", c_addr_v:"وهران، الجزائر",
+    c_email:"البريد الإلكتروني", c_phone:"الهاتف", c_addr:"العنوان", c_addr_v:"101 المنطقة الصناعية الكرمة، وهران، الجزائر",
     footer_tag:"تكنولوجيا المعلومات وتكامل الأنظمة",
     wa_msg:"مرحباً BEE TECHNOLOGY، أودّ معرفة المزيد عن خدماتكم."
   }
