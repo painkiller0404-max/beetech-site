@@ -10,7 +10,7 @@ const CONFIG = {
 const I18N = {
   fr: {
     nav_services:"Services", nav_about:"À propos", nav_why:"Pourquoi nous", nav_contact:"Contact",
-    hero_eyebrow:"IT & Intégration de systèmes · Oran, Algérie",
+    hero_eyebrow:"BEE TECHNOLOGY · IT & Intégration de systèmes · Oran, Algérie",
     hero_title:"Des infrastructures IT fiables pour faire avancer votre entreprise",
     hero_sub:"BEE TECHNOLOGY conçoit, déploie et maintient vos systèmes d'information : serveurs, réseaux, sécurité, téléphonie et applications métier.",
     hero_cta1:"Nous contacter", hero_cta2:"Nos services",
@@ -40,7 +40,7 @@ const I18N = {
   },
   en: {
     nav_services:"Services", nav_about:"About", nav_why:"Why us", nav_contact:"Contact",
-    hero_eyebrow:"IT & Systems Integration · Oran, Algeria",
+    hero_eyebrow:"BEE TECHNOLOGY · IT & Systems Integration · Oran, Algeria",
     hero_title:"Reliable IT infrastructure to keep your business moving",
     hero_sub:"BEE TECHNOLOGY designs, deploys and maintains your information systems: servers, networks, security, telephony and business applications.",
     hero_cta1:"Contact us", hero_cta2:"Our services",
@@ -70,7 +70,7 @@ const I18N = {
   },
   ar: {
     nav_services:"خدماتنا", nav_about:"من نحن", nav_why:"لماذا نحن", nav_contact:"اتصل بنا",
-    hero_eyebrow:"تكنولوجيا المعلومات وتكامل الأنظمة · وهران، الجزائر",
+    hero_eyebrow:"BEE TECHNOLOGY · تكنولوجيا المعلومات وتكامل الأنظمة · وهران، الجزائر",
     hero_title:"بنية تحتية معلوماتية موثوقة لدفع أعمالك إلى الأمام",
     hero_sub:"تقوم BEE TECHNOLOGY بتصميم ونشر وصيانة أنظمة المعلومات الخاصة بك: الخوادم والشبكات والأمن والهاتفية والتطبيقات المهنية.",
     hero_cta1:"تواصل معنا", hero_cta2:"خدماتنا",
